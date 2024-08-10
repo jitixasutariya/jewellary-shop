@@ -1,0 +1,36 @@
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header-one {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  background-color: black;
+}
+.discount-title {
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  color: rgb(255, 123, 0);
+  text-align: center;
+  font-size: 2em; /* Adjust the size as needed */
+  overflow: hidden; /* Prevent overflow of pseudo-element */
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(239, 225, 198, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(239, 225, 198, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(239, 225, 198, 0.8);
+  }
+}
+
+.discount-title {
+  animation: pulse 1.5s infinite;
+}

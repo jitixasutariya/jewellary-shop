@@ -1,0 +1,93 @@
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 100vw; /* Use full viewport width */
+  max-width: 1200px; /* Limit maximum width to 1200px */
+  margin: 0 auto; /* Center the container */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.search-input {
+  padding: 18px;
+  padding-left: 60px; /* Space for icons */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%; /* Make input responsive */
+  box-sizing: border-box; /* Include padding and border in the width */
+  font-size: 1.3rem;
+}
+
+.microphone-icon {
+  color: rgb(255, 123, 0); /* Adjust color as needed */
+  position: absolute;
+  left: 15px; /* Position the microphone icon */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem; /* Adjust size as needed */
+}
+
+.camera-icon {
+  color: rgb(255, 123, 0); /* Adjust color as needed */
+  position: absolute;
+  right: 70px; /* Position the camera icon */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem; /* Adjust size as needed */
+}
+
+.search-icon {
+  color: rgb(255, 123, 0);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  font-size: 1.8rem; /* Use relative units */
+  font-weight: 900;
+}
+
+/* Media Queries for Smaller Screens */
+
+@media (max-width: 500px) {
+  .search-container {
+    max-width: 500px;
+    padding: 15px;
+  }
+  .search-input {
+    padding: 15px;
+    padding-left: 45px; /* Adjust padding for smaller screens */
+  }
+
+  .microphone-icon,
+  .camera-icon,
+  .search-icon {
+    font-size: 1.3em; /* Adjust icon size for smaller screens */
+  }
+
+  .camera-icon {
+    right: 40px; /* Adjust position for smaller screens */
+  }
+  .microphone-icon {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .search-container {
+    max-width: 500px;
+  }
+  .search-input {
+    padding: 15px;
+    padding-left: 45px; /* Adjust padding for smaller screens */
+  }
+
+  .microphone-icon,
+  .camera-icon,
+  .search-icon {
+    font-size: 1.3em; /* Adjust icon size for smaller screens */
+  }
+
+  .camera-icon {
+    right: 60px; /* Adjust position for smaller screens */
+  }
+}
