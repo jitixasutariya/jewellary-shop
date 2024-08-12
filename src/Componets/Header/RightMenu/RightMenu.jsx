@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./RightMenu.css";
 import LoginPopup from "./Login/LoginPopup"; // Import the new LoginPopup component
+import SignUp from "./SignUp/SignUp"; // Import the SignUp component
 
 const RightMenu = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLoginPopupVisible, setIsLoginPopupVisible] = useState(false);
+  const [isSignUpVisible, setIsSignUpVisible] = useState(false); // Add state for SignUp
 
   const handleMouseEnter = () => setIsMenuVisible(true);
   const handleMouseLeave = () => setIsMenuVisible(false);
@@ -16,8 +18,14 @@ const RightMenu = () => {
     setIsMenuVisible(false); // Hide the mega menu when login is clicked
   };
 
+  const handleSignUpClick = () => {
+    setIsSignUpVisible(true);
+    setIsMenuVisible(false); // Hide the mega menu when signup is clicked
+  };
+
   const handleClosePopup = () => {
     setIsLoginPopupVisible(false);
+    setIsSignUpVisible(false); // Close both popups
   };
 
   return (
@@ -30,8 +38,7 @@ const RightMenu = () => {
         <FontAwesomeIcon icon={faUser} className="user-icon" />
         <span className="account-text">ACCOUNT</span>
       </div>
-
-      {isMenuVisible && !isLoginPopupVisible && (
+      {isMenuVisible && !isLoginPopupVisible && !isSignUpVisible && (
         <div className="mega-menu">
           <h1 style={{ textAlign: "center" }}>My Account</h1>
           <p
@@ -47,7 +54,9 @@ const RightMenu = () => {
             <button className="menu-button" onClick={handleLoginClick}>
               Login
             </button>
-            <button className="menu-button">SignUp</button>
+            <button className="menu-button" onClick={handleSignUpClick}>
+              SignUp
+            </button>
           </div>
           <p
             style={{
@@ -60,8 +69,9 @@ const RightMenu = () => {
           </p>
         </div>
       )}
-
       {isLoginPopupVisible && <LoginPopup onClose={handleClosePopup} />}
+      {isSignUpVisible && <SignUp onClose={handleClosePopup} />}{" "}
+      {/* Render SignUp form */}
     </div>
   );
 };

@@ -13,6 +13,7 @@ const LoginPopup = ({ onClose }) => {
     if (!email || !password) return;
     setEmail("");
     setPassword("");
+    onClose();
   };
 
   return (
@@ -21,7 +22,7 @@ const LoginPopup = ({ onClose }) => {
         <button className="close-button" onClick={onClose}>
           ×
         </button>
-        <h2 style={{ textAlign: "center", fontSize: "50px" }}>Login</h2>
+        <h2 style={{ textAlign: "center", fontSize: "45px" }}>Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email</label>

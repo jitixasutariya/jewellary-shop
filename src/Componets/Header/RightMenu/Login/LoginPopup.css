@@ -13,96 +13,98 @@
 
 .popup-content {
   background: white;
-  padding: 5rem;
+  padding: 2rem;
   border-radius: 8px;
-  width: 90vw; /* Adjusted for smaller screens */
-  max-width: 500px; /* Max width for larger screens */
-  height: auto; /* Auto height for content */
+  width: 90vw;
+  max-width: 500px;
+  height: auto;
   position: relative;
 }
 
 .close-button {
   position: absolute;
-  top: 25px;
-  right: 35px;
-  font-size: 2rem;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
   border: none;
 }
 .close-button:hover {
-  border: 3px solid rgb(255, 123, 0); /* Example: outline on focus */
+  border: 2px solid rgb(255, 123, 0);
 }
 
 .form-group {
-  margin: 1.9rem 0.3rem;
-  font-size: 1rem; /* Adjusted font size for better readability */
+  margin: 1rem 0;
+  font-size: 1rem;
   font-weight: 500;
-  position: relative; /* Added for absolute positioning of icons */
+  position: relative;
 }
 
 .form-group label {
   display: block;
-  padding: 10px 0;
+  padding: 0.5rem 0;
 }
 
 .form-group input {
   width: 100%;
-  padding: 1rem 1rem 1rem 5rem; /* Added left padding to make space for the icon */
+  padding: 1rem 1rem 1rem 5rem; /* Adjusted padding to fit icon better */
   box-sizing: border-box;
 }
 
 .form-group .icon {
   position: absolute;
-  left: 30px; /* Position the icon inside the textbox */
+  left: 1.9rem;
   top: 70%;
   transform: translateY(-50%);
-  font-size: 1.8rem;
-  color: #111010; /* Color of the icon */
+  font-size: 1.7rem;
+  color: #111010;
 }
 
 .button-container {
   display: flex;
-  justify-content: center; /* Centers the button horizontally */
+  justify-content: center;
 }
 
 .login-button {
-  width: 90%;
-  padding: 0.75rem 2rem;
+  width: 100%;
+  padding: 0.75rem;
   border: 2px solid rgb(255, 123, 0);
   background-color: rgb(255, 123, 0);
   color: rgb(7, 7, 7);
   cursor: pointer;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 2rem;
   border-radius: 50px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.2s;
 }
 .login-button:active {
-  transform: scale(0.98);
+  transform: scale(0.96);
 }
+
 .link-login {
   margin: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem; /* Adjusted font size */
+  font-size: 1rem;
   font-weight: 500;
-  gap: 0.9rem; /* Adjusted gap */
+  gap: 0.5rem;
 }
 
 .sign-up {
   text-decoration: none;
+  color: rgb(255, 123, 0);
 }
 
 /* Media queries for responsiveness */
 @media (min-width: 768px) {
   .popup-content {
-    width: 70vw; /* Wider on medium screens */
-    max-width: 600px; /* Max width for medium screens */
+    width: 70vw;
+    max-width: 600px;
   }
 
   .form-group {
-    font-size: 1.25rem; /* Larger font size for better readability */
+    font-size: 1.25rem;
   }
 
   .login-button {
@@ -110,12 +112,13 @@
   }
 
   .link-login {
-    font-size: 1.25rem; /* Larger font size */
+    font-size: 1.25rem;
   }
 }
+
 @media (max-width: 480px) {
   .popup-content {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .form-group {
@@ -123,7 +126,7 @@
   }
 
   .login-button {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem;
     font-size: 0.9rem;
   }
 
@@ -134,12 +137,12 @@
 
 @media (min-width: 1024px) {
   .popup-content {
-    width: 50vw; /* Wider on large screens */
-    max-width: 700px; /* Max width for large screens */
+    width: 50vw;
+    max-width: 700px;
   }
 
   .form-group {
-    font-size: 1.5rem; /* Larger font size */
+    font-size: 1.5rem;
   }
 
   .login-button {
@@ -147,6 +150,6 @@
   }
 
   .link-login {
-    font-size: 1.5rem; /* Larger font size */
+    font-size: 1.5rem;
   }
 }
