@@ -5,6 +5,7 @@
 }
 
 /* Account menu styling */
+/* Account menu styling */
 .account-menu {
   display: flex;
   flex-direction: column;
@@ -83,8 +84,12 @@
 
 /* Responsive styles */
 @media (max-width: 1024px) {
+  .right-menu-header {
+    width: 100%;
+    justify-content: center;
+  }
   .mega-menu {
-    top: 120%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -100,8 +105,6 @@
     justify-content: center;
   }
   .mega-menu {
-    width: 80vw;
-    max-width: 80vw; /* Ensure it doesn't exceed the viewport width */
     top: 90%;
     left: 50%;
     transform: translateX(-50%);
