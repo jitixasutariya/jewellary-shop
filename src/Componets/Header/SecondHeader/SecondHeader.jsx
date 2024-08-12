@@ -3,6 +3,8 @@ import "./SecondHeader.css";
 import LogoImg from "../../../Assets/logo.png";
 import SearchBox from "../SearchBox/SearchBox";
 import RightMenu from "../RightMenu/RightMenu";
+import WishList from "../RightMenu/WishList/WishList";
+import Cart from "../RightMenu/Cart/Cart";
 
 /**
  * SecondHeader Component
@@ -26,6 +28,8 @@ const SecondHeader = () => {
       {/* Right Sidebar containing the right menu */}
       <div className="right_sidebar">
         <RightMenu />
+        <WishList />
+        <Cart />
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const RightMenu = () => {
       {/* Account menu icon and text */}
       <div className="account-menu">
         <FontAwesomeIcon icon={faUser} className="user-icon" />
-        <span className="account-text">Account</span>
+        <span className="account-text">ACCOUNT</span>
       </div>
 
       {/* Conditional rendering of the mega menu when isMenuVisible is true */}

@@ -1,0 +1,78 @@
+/* Base styles for the cart menu on larger screens */
+.cart-menu {
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 20px; /* Add padding around the menu */
+}
+
+/* Hover effect for the cart menu */
+.cart-menu:hover {
+  color: rgb(255, 123, 0); /* Change text color on hover */
+}
+
+/* Styles for the cart icon */
+.cart-icon {
+  font-size: 1.8rem; /* Set font size for the icon */
+  margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Styles for the cart text */
+.cart-text {
+  font-size: 1.4rem; /* Set font size for the text */
+  font-weight: 500; /* Set font weight for the text */
+  position: relative; /* Required for positioning the pseudo-element */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Underline effect for cart text on hover */
+.cart-text::after {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Position the underline relative to text */
+  left: 0; /* Align the underline to the left */
+  bottom: -2px; /* Position the underline slightly below the text */
+  width: 100%; /* Make the underline span the full width of the text */
+  height: 2px; /* Set the thickness of the underline */
+  background-color: rgb(255, 123, 0); /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: left; /* Set the transform origin to the left */
+  transition: transform 0.3s ease; /* Smooth transition for underline expansion */
+}
+
+/* Expand underline on hover */
+.cart-text:hover::after {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+
+/* Media queries for responsiveness */
+
+/* Styles for tablets and small screens */
+@media (max-width: 768px) {
+  .cart-menu {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .cart-icon {
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+
+  .cart-text {
+    font-size: 1.2rem; /* Adjust text size */
+  }
+}
+
+/* Styles for mobile phones and very small screens */
+@media (max-width: 480px) {
+  .cart-menu {
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .cart-icon {
+    font-size: 1.2rem; /* Further adjust icon size */
+  }
+
+  .cart-text {
+    font-size: 1rem; /* Further adjust text size */
+  }
+}

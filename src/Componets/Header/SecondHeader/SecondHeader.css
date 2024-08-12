@@ -15,6 +15,8 @@ body {
   height: auto;
   background-color: rgb(228, 195, 154); /* Background color for the header */
   align-items: center; /* Center items vertically */
+  padding: 0 1rem; /* Add horizontal padding to avoid content touching the edges */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 /* Sidebar Styles */
@@ -26,22 +28,16 @@ body {
   justify-content: center; /* Center items horizontally within sidebars */
 }
 
-/* Left Sidebar Specific Styles */
-.left_sidebar {
-  padding-left: 80px; /* Add padding to the left of the sidebar */
-}
-
 /* Image Styles in Left Sidebar */
 .left_sidebar img {
   width: 120px; /* Set image width */
-  margin: 1.2rem; /* Space around the image */
+  margin: 1rem; /* Space around the image */
   border-radius: 50%; /* Make image round */
   max-width: 100%; /* Ensure image doesn't exceed its container */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Responsive Styles for Mobile Devices */
-/* For tablets */
+/* Responsive Styles for Tablets */
 @media (max-width: 1024px) {
   .second-header {
     flex-direction: row; /* Keep items in a row on tablets */
@@ -53,7 +49,7 @@ body {
   }
 }
 
-/* For large desktops */
+/* Responsive Styles for Large Desktops */
 @media (min-width: 1200px) {
   .second-header {
     gap: 3rem; /* Increase space between items on large screens */
@@ -64,6 +60,7 @@ body {
   }
 }
 
+/* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
   .second-header {
     flex-direction: column; /* Stack items vertically on smaller screens */
@@ -71,7 +68,8 @@ body {
   }
 
   .left_sidebar {
-    padding-left: 0; /* Remove left padding for smaller screens */
+    padding: 0; /* Remove left padding for smaller screens */
+    text-align: center; /* Center the content in the left sidebar */
   }
 
   .left_sidebar img {
