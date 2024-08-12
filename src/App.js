@@ -1,8 +1,8 @@
-import "./App.css";
+// App.js
+import React from "react";
 import HomePage from "./Pages/Home/HomePage";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-// The App component is the main component of this application.
 function App() {
   return (
     <div className="App">
