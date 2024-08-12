@@ -1,3 +1,4 @@
+/* Styling for the search container */
 .search-container {
   position: relative;
   display: inline-block;
@@ -7,6 +8,7 @@
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
+/* Styling for the search input field */
 .search-input {
   padding: 18px;
   padding-left: 60px; /* Space for icons */
@@ -19,6 +21,7 @@
   font-size: 1.3rem;
 }
 
+/* Styling for the microphone icon */
 .microphone-icon {
   color: rgb(255, 123, 0); /* Adjust color as needed */
   position: absolute;
@@ -28,6 +31,7 @@
   font-size: 1.8rem; /* Adjust size as needed */
 }
 
+/* Styling for the camera icon */
 .camera-icon {
   color: rgb(255, 123, 0); /* Adjust color as needed */
   position: absolute;
@@ -37,6 +41,7 @@
   font-size: 1.8rem; /* Adjust size as needed */
 }
 
+/* Styling for the search icon */
 .search-icon {
   color: rgb(255, 123, 0);
   position: absolute;
@@ -48,8 +53,7 @@
   font-weight: 900;
 }
 
-/* Add this to SearchBox.css */
-
+/* Styling for the mega menu */
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -63,6 +67,8 @@
   padding: 20px;
   box-sizing: border-box;
 }
+
+/* Media query for screens smaller than 390px */
 @media (max-width: 390px) {
   .mega-menu {
     padding: 5px; /* Reduce padding for smaller screens */
@@ -71,6 +77,8 @@
     font-size: 1.2rem; /* Optionally adjust font size */
   }
 }
+
+/* Media query for screens smaller than 500px */
 @media (max-width: 500px) {
   .mega-menu {
     padding: 10px; /* Reduce padding for smaller screens */
@@ -79,6 +87,8 @@
     font-size: 0.9rem; /* Optionally adjust font size */
   }
 }
+
+/* Media query for screens between 501px and 1200px */
 @media (min-width: 501px) and (max-width: 1200px) {
   .mega-menu {
     padding: 15px; /* Slightly less padding */
@@ -86,6 +96,8 @@
     font-size: 1rem; /* Adjust font size if necessary */
   }
 }
+
+/* Media query for screens larger than 1200px */
 @media (min-width: 1201px) {
   .mega-menu {
     padding: 20px; /* Use more padding for larger screens */
@@ -97,10 +109,11 @@
 
 /* Media Queries for Smaller Screens */
 
+/* Media query for screens smaller than 500px */
 @media (max-width: 500px) {
   .search-container {
-    max-width: 500px;
-    padding: 15px;
+    max-width: 500px; /* Limit max width */
+    padding: 15px; /* Adjust padding for smaller screens */
   }
   .search-input {
     padding: 15px;
@@ -121,9 +134,10 @@
   }
 }
 
+/* Media query for screens smaller than 1500px */
 @media (max-width: 1500px) {
   .search-container {
-    max-width: 500px;
+    max-width: 500px; /* Limit max width */
   }
   .search-input {
     padding: 15px;

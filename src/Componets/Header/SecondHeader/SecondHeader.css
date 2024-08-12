@@ -1,3 +1,4 @@
+/* Base Styles */
 html,
 body {
   width: 100%;
@@ -5,60 +6,59 @@ body {
   padding: 0;
 }
 
+/* Header Styles */
 .second-header {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  display: flex; /* Use flexbox layout for the header */
+  flex-direction: row; /* Align children in a row */
+  gap: 2rem; /* Space between items */
   width: 100%;
   height: auto;
-  background-color: rgb(228, 195, 154);
+  background-color: rgb(228, 195, 154); /* Background color for the header */
   align-items: center; /* Center items vertically */
 }
 
+/* Sidebar Styles */
 .left_sidebar,
 .middle_sidebar,
 .right_sidebar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Use flexbox layout for sidebars */
+  align-items: center; /* Center items vertically within sidebars */
+  justify-content: center; /* Center items horizontally within sidebars */
 }
 
+/* Left Sidebar Specific Styles */
 .left_sidebar {
-  padding-left: 80px;
+  padding-left: 80px; /* Add padding to the left of the sidebar */
 }
 
+/* Image Styles in Left Sidebar */
 .left_sidebar img {
-  width: 120px;
-  margin: 1.2rem;
-  border-radius: 50%;
-  max-width: 100%;
+  width: 120px; /* Set image width */
+  margin: 1.2rem; /* Space around the image */
+  border-radius: 50%; /* Make image round */
+  max-width: 100%; /* Ensure image doesn't exceed its container */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* .middle_sidebar,
-.right_sidebar {
-  flex: 1;
-  text-align: center;
-} */
-
+/* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
   .second-header {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 1rem; /* Reduce space between items */
   }
 
   .left_sidebar {
-    padding-left: 0;
+    padding-left: 0; /* Remove left padding for smaller screens */
   }
 
   .left_sidebar img {
-    width: 100px;
-    margin: 0.5rem;
+    width: 100px; /* Adjust image width for smaller screens */
+    margin: 0.5rem; /* Adjust space around the image */
   }
 
   .middle_sidebar,
   .right_sidebar {
-    font-size: 1rem;
-    margin: 1rem 0;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    margin: 1rem 0; /* Space around the sidebars */
   }
 }

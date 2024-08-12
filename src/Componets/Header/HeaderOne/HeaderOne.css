@@ -1,9 +1,12 @@
+/* Apply basic styling to the body and html elements */
 body,
 html {
   width: 100%;
   margin: 0;
   padding: 0;
 }
+
+/* Styling for the header section */
 .header-one {
   overflow: hidden;
   width: 100%;
@@ -11,26 +14,30 @@ html {
   padding: 12px;
   background-color: black;
 }
+
+/* Styling for the discount title */
 .discount-title {
   position: relative; /* Ensure the pseudo-element is positioned correctly */
-  color: rgb(255, 123, 0);
-  text-align: center;
+  color: rgb(255, 123, 0); /* Text color */
+  text-align: center; /* Center align text */
   font-size: 2em; /* Adjust the size as needed */
   overflow: hidden; /* Prevent overflow of pseudo-element */
 }
 
+/* Keyframes for the pulse animation */
 @keyframes pulse {
   0% {
-    text-shadow: 0 0 10px rgba(239, 225, 198, 0.8);
+    text-shadow: 0 0 10px rgba(239, 225, 198, 0.8); /* Initial shadow */
   }
   50% {
-    text-shadow: 0 0 20px rgba(239, 225, 198, 0.8);
+    text-shadow: 0 0 20px rgba(239, 225, 198, 0.8); /* Max shadow */
   }
   100% {
-    text-shadow: 0 0 10px rgba(239, 225, 198, 0.8);
+    text-shadow: 0 0 10px rgba(239, 225, 198, 0.8); /* End shadow */
   }
 }
 
+/* Apply pulse animation to the discount title */
 .discount-title {
-  animation: pulse 1.5s infinite;
+  animation: pulse 1.5s infinite; /* Animation duration and repetition */
 }
