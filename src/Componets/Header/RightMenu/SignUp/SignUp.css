@@ -1,124 +1,189 @@
+/* Styles for the Signup Popup */
 .signup-popup {
+  /* Fixes the position of the popup to cover the entire viewport */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  /* Adds a semi-transparent black background overlay */
   background: rgba(0, 0, 0, 0.5);
+  /* Centers the signup form both vertically and horizontally */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Styles for the Signup Form */
 .signup-form {
+  /* Ensures the form is placed relative to its parent */
   position: relative;
+  /* White background for the form */
   background: white;
+  /* Adds padding inside the form */
   padding: 50px;
+  /* Rounds the corners of the form */
   border-radius: 8px;
+  /* Sets a fixed width for the form */
   width: 700px;
+  /* Allows the form height to adjust automatically */
   height: auto;
+  /* Adds a subtle shadow effect around the form */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Styles for the Signup Form Heading */
 .signup-form h2 {
+  /* Centers the heading text */
   text-align: center;
+  /* Sets the font size for the heading */
   font-size: 45px;
+  /* Removes the default margin at the top */
   margin-top: 0;
 }
 
+/* Styles for the Submit Button */
 .signup-form button[type="submit"] {
+  /* Makes the button span the entire width of the form */
   width: 100%;
+  /* Adds padding inside the button */
   padding: 20px;
+  /* Sets the background color of the button */
   background-color: rgb(255, 134, 0);
+  /* Changes the text color to white */
   color: white;
+  /* Removes the default border */
   border: none;
+  /* Rounds the corners of the button */
   border-radius: 50px;
+  /* Changes the cursor to a pointer on hover */
   cursor: pointer;
+  /* Adds font styling to the button */
   font-weight: 500;
   font-size: 1.5rem;
+  /* Adds a smooth transition effect on button press */
   transition: transform 0.2s;
 }
 
+/* Adds a scale effect on button press */
 .signup-form:active {
   transform: scale(0.98);
 }
 
+/* Styles for the Close Button */
 .close-button {
+  /* Positions the close button at the top right of the form */
   position: absolute;
   top: 25px;
   right: 30px;
+  /* Removes the default button background */
   background: none;
+  /* Removes the default border */
   border: none;
+  /* Sets the font size for the close button */
   font-size: 35px;
+  /* Sets the color of the close button */
   color: #050505;
+  /* Changes the cursor to a pointer on hover */
   cursor: pointer;
 }
 
+/* Changes the close button color on hover */
 .close-button:hover {
   color: #060606;
 }
 
+/* Styles for the Input Container */
 .input-container {
+  /* Ensures the container is positioned relative to its parent */
   position: relative;
+  /* Adds space below the input container */
   margin-bottom: 8px;
 }
 
+/* Styles for the Icon Inside the Input Container */
 .input-container .icon {
+  /* Positions the icon inside the input field */
   position: absolute;
   top: 50%;
   left: 25px;
+  /* Centers the icon vertically */
   transform: translateY(-50%);
+  /* Sets the font size for the icon */
   font-size: 1.8rem;
+  /* Sets the color of the icon */
   color: #070707;
 }
 
+/* Styles for the Input Fields */
 .input-container input {
+  /* Makes the input field span the entire width of the container */
   width: 100%;
+  /* Adds padding inside the input field */
   padding: 22px 20px 22px 70px;
+  /* Adds a border around the input field */
   border: 1px solid #ddd;
+  /* Rounds the corners of the input field */
   border-radius: 4px;
+  /* Ensures the padding is considered in the total width */
   box-sizing: border-box;
 }
 
-/* Media queries for responsiveness */
+/* Media Queries for Responsiveness */
+
+/* Adjustments for screens with a max-width of 768px (Tablets) */
 @media (max-width: 768px) {
   .signup-form {
+    /* Makes the form take up 90% of the viewport width */
     width: 90%;
+    /* Reduces the padding inside the form */
     padding: 20px;
   }
 
   .signup-form h2 {
+    /* Adjusts the heading font size for smaller screens */
     font-size: 2rem;
   }
 
   .signup-form button[type="submit"] {
+    /* Reduces the font size for the submit button */
     font-size: 1rem;
   }
 
   .close-button {
+    /* Reduces the size of the close button */
     font-size: 30px;
+    /* Adjusts the top and right position for the close button */
     top: 15px;
     right: 15px;
   }
 }
 
+/* Further adjustments for screens with a max-width of 480px (Mobile devices) */
 @media (max-width: 480px) {
   .signup-form {
+    /* Makes the form take up 95% of the viewport width */
     width: 95%;
+    /* Further reduces the padding inside the form */
     padding: 15px;
   }
 
   .signup-form h2 {
+    /* Further reduces the heading font size for small screens */
     font-size: 1.5rem;
   }
 
   .signup-form button[type="submit"] {
+    /* Further reduces the font size for the submit button */
     font-size: 0.9rem;
+    /* Reduces the padding inside the submit button */
     padding: 15px;
   }
 
   .close-button {
+    /* Further reduces the size of the close button */
     font-size: 25px;
+    /* Adjusts the top and right position for the close button */
     top: 10px;
     right: 10px;
   }

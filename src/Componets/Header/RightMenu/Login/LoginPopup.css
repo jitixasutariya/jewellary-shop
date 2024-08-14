@@ -1,155 +1,169 @@
-/* Base styles */
+/* Base styles for the login popup overlay */
 .login-popup {
-  position: fixed;
+  position: fixed; /* Position the popup over the entire viewport */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex; /* Use flexbox to center the content */
   justify-content: center;
   align-items: center;
 }
 
+/* Styles for the content container within the popup */
 .popup-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 90vw;
-  max-width: 500px;
-  height: auto;
-  position: relative;
+  background: white; /* White background for the content box */
+  padding: 2rem; /* Padding around the content */
+  border-radius: 8px; /* Rounded corners for the content box */
+  width: 90vw; /* Set width to 90% of the viewport width */
+  max-width: 500px; /* Maximum width of the content box */
+  height: auto; /* Height adjusts based on content */
+  position: relative; /* Allows absolute positioning of child elements */
 }
 
+/* Styles for the close button inside the popup */
 .close-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border: none;
+  position: absolute; /* Position the button inside the popup content */
+  top: 1rem; /* Space from the top */
+  right: 1rem; /* Space from the right */
+  font-size: 1.5rem; /* Font size of the close button */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  border: none; /* No border for the button */
 }
 .close-button:hover {
-  border: 2px solid rgb(255, 123, 0);
+  border: 2px solid rgb(255, 123, 0); /* Add an orange border on hover */
 }
 
+/* Styles for the form group container */
 .form-group {
-  margin: 1rem 0;
-  font-size: 1rem;
-  font-weight: 500;
-  position: relative;
+  margin: 1rem 0; /* Margin around the form group */
+  font-size: 1rem; /* Default font size */
+  font-weight: 500; /* Medium font weight */
+  position: relative; /* Allows positioning of the icon */
 }
 
+/* Styles for form labels */
 .form-group label {
-  display: block;
-  padding: 0.5rem 0;
+  display: block; /* Labels are block elements */
+  padding: 0.5rem 0; /* Padding around the label */
 }
 
+/* Styles for form inputs */
 .form-group input {
-  width: 100%;
-  padding: 1rem 1rem 1rem 5rem; /* Adjusted padding to fit icon better */
-  box-sizing: border-box;
+  width: 100%; /* Input takes up the full width of the container */
+  padding: 1rem 1rem 1rem 5rem; /* Adjusted padding to fit the icon */
+  box-sizing: border-box; /* Ensures padding is included in width/height */
 }
 
+/* Styles for icons within the form group */
 .form-group .icon {
-  position: absolute;
-  left: 1.9rem;
-  top: 70%;
-  transform: translateY(-50%);
-  font-size: 1.7rem;
-  color: #111010;
+  position: absolute; /* Position icon inside the input field */
+  left: 1.9rem; /* Space from the left side */
+  top: 70%; /* Align vertically in the middle */
+  transform: translateY(-50%); /* Center the icon vertically */
+  font-size: 1.7rem; /* Font size of the icon */
+  color: #111010; /* Color of the icon */
 }
 
+/* Container for the submit button */
 .button-container {
-  display: flex;
+  display: flex; /* Use flexbox to center the button */
   justify-content: center;
 }
 
+/* Styles for the login button */
 .login-button {
-  width: 100%;
-  padding: 0.75rem;
-  border: 2px solid rgb(255, 123, 0);
-  background-color: rgb(255, 123, 0);
-  color: rgb(7, 7, 7);
-  cursor: pointer;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: transform 0.2s;
+  width: 100%; /* Button takes up full width of the container */
+  padding: 20px; /* Padding around the button */
+  background-color: rgb(255, 123, 0); /* Orange background color */
+  color: white; /* White text color */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  border-radius: 50px; /* Rounded corners for the button */
+  font-weight: 500; /* Medium font weight */
+  font-size: 1.5rem; /* Font size of the button */
+  border: none; /* No border for the button */
+  transition: transform 0.2s; /* Smooth scaling on click */
 }
 .login-button:active {
-  transform: scale(0.96);
+  transform: scale(0.96); /* Scale down slightly when the button is active */
 }
 
+/* Styles for the sign-up link container */
 .link-login {
-  margin: 1rem 0;
-  display: flex;
+  margin: 1rem 0; /* Margin around the link container */
+  display: flex; /* Use flexbox to center and align items */
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  font-weight: 500;
-  gap: 0.5rem;
+  font-size: 1rem; /* Font size of the text */
+  font-weight: 500; /* Medium font weight */
+  gap: 0.5rem; /* Space between the text and the link */
 }
 
+/* Styles for the sign-up link */
 .sign-up {
-  text-decoration: none;
-  color: rgb(255, 123, 0);
+  text-decoration: none; /* Remove underline from the link */
+  color: rgb(255, 123, 0); /* Orange color for the link */
 }
 
 /* Media queries for responsiveness */
+
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .popup-content {
-    width: 70vw;
-    max-width: 600px;
+    width: 70vw; /* Adjust width to 70% of the viewport */
+    max-width: 600px; /* Increase maximum width */
   }
 
   .form-group {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Increase font size */
   }
 
   .login-button {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Increase button font size */
   }
 
   .link-login {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Increase link font size */
   }
 }
 
+/* Small devices (mobile phones, 480px and down) */
 @media (max-width: 480px) {
   .popup-content {
-    padding: 1rem;
+    padding: 1rem; /* Reduce padding for smaller screens */
   }
 
   .form-group {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Decrease font size */
   }
 
   .login-button {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    padding: 0.5rem; /* Reduce button padding */
+    font-size: 0.9rem; /* Decrease button font size */
   }
 
   .link-login {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Decrease link font size */
   }
 }
 
+/* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
   .popup-content {
-    width: 50vw;
-    max-width: 700px;
+    width: 50vw; /* Adjust width to 50% of the viewport */
+    max-width: 700px; /* Increase maximum width */
   }
 
   .form-group {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Increase font size */
   }
 
   .login-button {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Increase button font size */
   }
 
   .link-login {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Increase link font size */
   }
 }

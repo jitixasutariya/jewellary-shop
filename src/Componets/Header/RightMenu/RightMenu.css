@@ -1,155 +1,160 @@
-/* General styling */
+/* General styling for the right menu header */
 .right-menu-header {
   position: relative;
-  cursor: pointer;
+  cursor: pointer; /* Changes cursor to pointer when hovering over the header */
 }
 
-/* Account menu styling */
+/* Styling for the account menu */
 .account-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px; /* Adds space around the content inside the menu */
 }
+
+/* Hover effect for the account menu text */
 .account-menu:hover {
-  color: rgb(255, 123, 0);
+  color: rgb(255, 123, 0); /* Changes text color on hover */
 }
+
+/* Styling for the user icon */
 .user-icon {
-  font-size: 1.8rem;
-  margin-bottom: 5px;
+  font-size: 1.8rem; /* Larger size for the user icon */
+  margin-bottom: 5px; /* Adds space between the icon and the text */
 }
 
+/* Styling for the account text */
 .account-text {
-  font-size: 1.4rem; /* Relative unit for scalability */
-  font-weight: 500;
-  position: relative; /* Position for the pseudo-element */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-size: 1.4rem; /* Font size with a relative unit for scalability */
+  font-weight: 500; /* Slightly bolder text */
+  position: relative; /* Required for the pseudo-element positioning */
+  transition: color 0.3s ease; /* Smooth transition for text color change */
 }
 
-/* Create an underline on hover */
+/* Underline effect for account text on hover */
 .account-text::after {
-  content: "";
+  content: ""; /* Empty content for the underline */
   position: absolute;
   left: 0;
-  bottom: -2px; /* Position the underline slightly below the text */
+  bottom: -2px; /* Positions the underline slightly below the text */
   width: 100%;
   height: 2px;
-  background-color: rgb(255, 123, 0); /* Underline color */
-  transform: scaleX(0); /* Start with no underline */
-  transform-origin: left;
-  transition: transform 0.3s ease; /* Smooth underline transition */
+  background-color: rgb(255, 123, 0); /* Color of the underline */
+  transform: scaleX(0); /* Start with no underline visible */
+  transform-origin: left; /* Expands the underline from the left side */
+  transition: transform 0.3s ease; /* Smooth transition for underline expansion */
 }
 
+/* Expand the underline when hovering over the text */
 .account-text:hover::after {
-  transform: scaleX(1); /* Expand underline on hover */
+  transform: scaleX(
+    1
+  ); /* Makes the underline visible by scaling it to full width */
 }
 
-/* Mega Menu styling */
+/* Styling for the mega menu dropdown */
 .mega-menu {
   position: absolute;
-  top: 100%;
+  top: 100%; /* Position the menu right below the header */
   left: 0;
-  width: 400px; /* Default width */
-  max-width: 100vw; /* Ensure the menu doesn't exceed viewport width */
-  padding: 30px;
+  width: 400px; /* Default width of the mega menu */
+  max-width: 100vw; /* Ensure the menu doesn't exceed the viewport width */
+  padding: 30px; /* Adds padding inside the menu */
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 100;
-  overflow-x: auto; /* Add horizontal scroll if needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for depth */
+  border-radius: 8px; /* Rounds the corners of the menu */
+  z-index: 100; /* Ensures the menu stays on top of other elements */
+  overflow-x: auto; /* Adds horizontal scroll if the content exceeds the menu width */
 }
 
-/* Adjusting layout with Flexbox */
+/* Flexbox layout for the menu buttons */
 .menu-buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: center; /* Center-aligns the buttons */
+  gap: 10px; /* Adds space between the buttons */
 }
 
+/* Styling for individual menu buttons */
 .menu-button {
-  padding: 10px 20px;
-  color: rgb(7, 7, 7);
-  border: 3px solid rgb(255, 123, 0);
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1.4rem; /* Relative unit for scalability */
-  font-weight: 500;
+  padding: 10px 20px; /* Adds space inside the button */
+  color: rgb(7, 7, 7); /* Button text color */
+  border: 3px solid rgb(255, 123, 0); /* Button border styling */
+  border-radius: 4px; /* Slightly rounds the button corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-size: 1.4rem; /* Font size with relative units */
+  font-weight: 500; /* Slightly bolder text */
 }
 
+/* Hover effect for the menu buttons */
 .menu-button:hover {
-  background-color: bisque;
+  background-color: bisque; /* Changes the background color on hover */
 }
 
-/* Responsive styles */
+/* Responsive styles for different screen sizes */
+
+/* For screens 1024px wide or smaller */
 @media (max-width: 1024px) {
   .right-menu-header {
-    width: 100%;
-    justify-content: center;
+    width: 100%; /* Full width for smaller screens */
+    justify-content: center; /* Center-aligns the content */
   }
   .mega-menu {
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centers the menu horizontally */
   }
-
   .account-text {
-    font-size: 1.2rem; /* Smaller font for smaller screens */
+    font-size: 1.2rem; /* Smaller font size for smaller screens */
   }
 }
 
+/* For screens 768px wide or smaller */
 @media (max-width: 768px) {
   .right-menu-header {
-    padding: 5px;
-    justify-content: center;
+    padding: 5px; /* Reduces padding for smaller screens */
+    justify-content: center; /* Center-aligns the content */
   }
   .mega-menu {
-    top: 90%;
+    top: 90%; /* Adjusts the menu position slightly higher */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centers the menu horizontally */
   }
-
   .account-menu {
-    padding: 20px;
+    padding: 20px; /* Maintains padding for the account menu */
   }
-
   .user-icon {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller icon size for smaller screens */
   }
-
   .account-text {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Smaller font size for account text */
   }
-
   .menu-button {
-    padding: 8px 16px;
-    font-size: 0.9rem; /* Slightly smaller button for smaller screens */
+    padding: 8px 16px; /* Smaller padding for buttons */
+    font-size: 0.9rem; /* Smaller button text size */
   }
 }
 
+/* For screens 480px wide or smaller */
 @media (max-width: 480px) {
   .mega-menu {
-    width: 90vw;
-    max-width: 90vw; /* Ensure it doesn't exceed the viewport width */
-    top: 90%;
+    width: 90vw; /* Menu width is 90% of the viewport width */
+    max-width: 90vw; /* Ensures the menu doesn't exceed viewport width */
+    top: 90%; /* Positions the menu slightly higher */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centers the menu horizontally */
   }
-
   .account-menu {
-    padding: 15px;
+    padding: 15px; /* Reduces padding for the account menu */
   }
-
   .user-icon {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Smaller icon size for very small screens */
   }
-
   .account-text {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller font size for account text */
   }
-
   .menu-button {
-    padding: 6px 14px;
-    font-size: 0.8rem; /* Smaller button size for very small screens */
+    padding: 6px 14px; /* Smaller padding for buttons */
+    font-size: 0.8rem; /* Smaller button text size for very small screens */
   }
 }

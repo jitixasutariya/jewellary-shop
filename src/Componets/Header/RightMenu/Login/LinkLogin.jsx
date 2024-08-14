@@ -1,15 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./LoginPopup.css";
+import React from "react"; // Importing React to use React components
+import { Link } from "react-router-dom"; // Importing Link from react-router-dom to handle navigation
+import "./LoginPopup.css"; // Importing the CSS file for styling the component
 
+// Functional component that renders a link for signing up
 const LinkLogin = () => {
   return (
     <div className="link-login">
+      {/* Link component to navigate to the Sign-Up page */}
       <Link to="/sign-up" className="sign-up">
-        Dont't have account please ! SignUp
+        Don't have an account? Please Sign Up
       </Link>
     </div>
   );
 };
 
-export default LinkLogin;
+export default LinkLogin; // Exporting the component to be used in other parts of the application
