@@ -1,0 +1,137 @@
+/* Base styles for large screens */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.navbar-toggle {
+  display: none; /* Hidden on large screens */
+  font-size: 24px;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 10rem;
+}
+
+.navbar-links li {
+  margin: 1.1rem;
+  position: relative;
+}
+
+.navbar-links a {
+  color: #070707;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  padding: 0 4rem;
+}
+
+.navbar-links a:hover {
+  color: orange;
+}
+
+/* Dropdown menu styles */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  width: 300px;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0; /* Adjust to left to align with the parent */
+  background-color: #fff;
+  padding: 1rem;
+  margin: 0;
+  border: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 2.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.icon-ring {
+  width: 40px;
+  height: auto;
+  margin-right: 20px;
+}
+.icon-bracelt {
+  width: 55px;
+  height: auto;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+.dropdown-menu a {
+  font-size: 22px;
+  line-height: 1;
+}
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    width: 100%; /* Full width on small screens */
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links a {
+    font-size: 18px; /* Adjust font size for very small screens */
+  }
+
+  .icon-ring,
+  .icon-bracelt {
+    width: 30px; /* Smaller icons for smaller screens */
+  }
+}
