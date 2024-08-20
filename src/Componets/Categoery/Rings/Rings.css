@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 110px;
+}
+.title {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  font-size: 40px;
+}

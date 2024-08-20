@@ -3,7 +3,8 @@ import "./AboutPage.css";
 import HeaderOne from "../../Componets/Header/HeaderOne/HeaderOne";
 import SecondHeader from "../../Componets/Header/SecondHeader/SecondHeader";
 import HeaderThird from "../../Componets/Header/HeaderThird/HeaderThird";
-
+import AboutBanner from "./AboutBanner";
+import Footer from "../../Componets/Footer/Footer";
 const AboutPage = () => {
   return (
     <div>
@@ -14,6 +15,8 @@ const AboutPage = () => {
       <SecondHeader />
       {/* This is the third header */}
       <HeaderThird />
+      <AboutBanner />
+      <Footer />
     </div>
   );
 };

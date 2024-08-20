@@ -1,0 +1,167 @@
+/* Container for all cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 20px; /* Space between cards */
+  margin: 30px;
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Individual card styling */
+.card {
+  width: 100%; /* Full width by default */
+  max-width: 450px; /* Maximum width for large screens */
+  height: 530px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Elevate card on hover */
+}
+
+/* Card image styling */
+.card-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Card info section styling */
+.card_info {
+  padding: 30px;
+  height: calc(100% - 350px); /* Adjust height to match image height */
+  box-sizing: border-box;
+}
+
+/* Details section inside card */
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.card_price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.card_title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Size and action links styling */
+.size-details {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between icons */
+}
+
+.card_size {
+  margin-top: 20px;
+  margin-right: 280px; /* Adjust spacing from icons as needed */
+}
+
+/* Action links styling */
+.add-to-cart-link,
+.whislist-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.add-to-cart-icon,
+.whislist-icon {
+  font-size: 28px;
+  color: #ff6600;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.add-to-cart-icon:hover,
+.whislist-icon:hover {
+  color: #e65c00;
+}
+
+/* Responsive Styles */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Full width on smaller screens */
+    height: auto; /* Let height adjust automatically */
+  }
+
+  .card-img {
+    height: 250px; /* Adjust image height */
+  }
+
+  .card_info {
+    height: auto; /* Let height adjust automatically */
+  }
+
+  .card-details {
+    flex-direction: column; /* Stack price and title vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .card_price {
+    font-size: 18px;
+  }
+
+  .card_title {
+    font-size: 20px;
+  }
+
+  .card_size {
+    margin-right: 0; /* Remove large margin on smaller screens */
+  }
+
+  .size-details {
+    gap: 10px; /* Reduced space between icons */
+  }
+
+  .add-to-cart-icon,
+  .whislist-icon {
+    font-size: 24px; /* Smaller icons on smaller screens */
+  }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (max-width: 576px) {
+  .card {
+    margin: 10px; /* Reduce margin for small screens */
+  }
+
+  .card-img {
+    height: 200px; /* Further reduce image height */
+  }
+
+  .card_info {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .card-details {
+    padding: 10px 0; /* Reduce padding in details section */
+  }
+
+  .card_price {
+    font-size: 16px;
+  }
+
+  .card_title {
+    font-size: 18px;
+  }
+
+  .add-to-cart-icon,
+  .whislist-icon {
+    font-size: 20px; /* Even smaller icons */
+  }
+}

@@ -5,7 +5,7 @@ import HeaderOne from "../../Componets/Header/HeaderOne/HeaderOne";
 import SecondHeader from "../../Componets/Header/SecondHeader/SecondHeader";
 import HeaderThird from "../../Componets/Header/HeaderThird/HeaderThird";
 import HomeBanner from "./HomeBanner/HomeBanner";
-import ProductList from "../../Componets/ProductCard/ProductList";
+import Footer from "../../Componets/Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -14,7 +14,7 @@ const HomePage = () => {
       <SecondHeader />
       <HeaderThird />
       <HomeBanner />
-      <ProductList />
+      <Footer />
     </div>
   );
 };

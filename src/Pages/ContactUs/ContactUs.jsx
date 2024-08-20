@@ -3,6 +3,9 @@ import "./ContactUs.css";
 import HeaderOne from "../../Componets/Header/HeaderOne/HeaderOne";
 import SecondHeader from "../../Componets/Header/SecondHeader/SecondHeader";
 import HeaderThird from "../../Componets/Header/HeaderThird/HeaderThird";
+import ContactForm from "../../Componets/ContactForm/ContactForm";
+import Map from "../../Componets/ContactForm/Map";
+import Footer from "../../Componets/Footer/Footer";
 
 const ContactUs = () => {
   return (
@@ -14,6 +17,9 @@ const ContactUs = () => {
       <SecondHeader />
       {/* This is the third header */}
       <HeaderThird />
+      <ContactForm />
+      <Map />
+      <Footer />
     </div>
   );
 };

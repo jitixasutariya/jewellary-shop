@@ -7,6 +7,7 @@ import LoginPopup from "./Componets/Header/RightMenu/Login/LoginPopup";
 import SignUp from "./Componets/Header/RightMenu/SignUp/SignUp";
 import ProtectedRoutes from "./Services/ProtectedRoutes";
 import WeddingCollection from "./Pages/WeddingCollection/WeddingCollection";
+import Rings from "./Componets/Categoery/Rings/Rings";
 const App = () => {
   return (
     <div className="app-header">
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
           </Route>
           <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/gold/rings" element={<Rings />} />
           <Route path="/wedding-collections" element={<WeddingCollection />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
