@@ -4,6 +4,7 @@ import HeaderOne from "../../Componets/Header/HeaderOne/HeaderOne";
 import SecondHeader from "../../Componets/Header/SecondHeader/SecondHeader";
 import HeaderThird from "../../Componets/Header/HeaderThird/HeaderThird";
 import AboutBanner from "./AboutBanner";
+import MemberShip from "../../Componets/MemberShip/MemberShip";
 import Footer from "../../Componets/Footer/Footer";
 const AboutPage = () => {
   return (
@@ -16,6 +17,7 @@ const AboutPage = () => {
       {/* This is the third header */}
       <HeaderThird />
       <AboutBanner />
+      <MemberShip />
       <Footer />
     </div>
   );

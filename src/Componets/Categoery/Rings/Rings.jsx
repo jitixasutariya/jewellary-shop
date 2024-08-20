@@ -5,6 +5,7 @@ import HeaderOne from "../../Header/HeaderOne/HeaderOne";
 import SecondHeader from "../../Header/SecondHeader/SecondHeader";
 import HeaderThird from "../../Header/HeaderThird/HeaderThird";
 import ProductCard from "../../ProductCard/ProductCard";
+import MemberShip from "../../MemberShip/MemberShip";
 import Footer from "../../Footer/Footer";
 
 const Rings = () => {
@@ -26,7 +27,7 @@ const Rings = () => {
           <ProductCard {...RingData[7]} />
         </div>
       </div>
-
+      <MemberShip />
       <Footer />
     </div>
   );

@@ -1,0 +1,16 @@
+.home-product-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.latest-product-details h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+.latest-product-details p {
+  text-align: center;
+  font-size: 28px;
+}

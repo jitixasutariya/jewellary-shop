@@ -8,6 +8,8 @@ import SignUp from "./Componets/Header/RightMenu/SignUp/SignUp";
 import ProtectedRoutes from "./Services/ProtectedRoutes";
 import WeddingCollection from "./Pages/WeddingCollection/WeddingCollection";
 import Rings from "./Componets/Categoery/Rings/Rings";
+import Product from "./Componets/Product/Product";
+import ErrorPage from "./Pages/ErrorPage";
 const App = () => {
   return (
     <div className="app-header">
@@ -20,8 +22,10 @@ const App = () => {
           </Route>
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/gold/rings" element={<Rings />} />
+          <Route path="/product/:id" element={<Product />} />
           <Route path="/wedding-collections" element={<WeddingCollection />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </div>

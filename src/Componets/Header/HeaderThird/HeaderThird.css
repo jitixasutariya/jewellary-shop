@@ -1,4 +1,7 @@
-/* HeaderThird.css */
 .header-third {
-  /* background-color: #0a0a0a; */
+  width: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

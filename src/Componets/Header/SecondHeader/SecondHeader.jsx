@@ -6,12 +6,6 @@ import RightMenu from "../RightMenu/RightMenu";
 import WishList from "../RightMenu/WishList/WishList";
 import Cart from "../RightMenu/Cart/Cart";
 
-/**
- * SecondHeader Component
- *
- * This component represents the second header section of the application.
- * It includes a logo on the left, a search box in the middle, and a right-side menu.
- */
 const SecondHeader = () => {
   return (
     <div className="second-header">

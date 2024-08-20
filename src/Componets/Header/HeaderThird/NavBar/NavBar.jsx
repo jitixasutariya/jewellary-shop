@@ -28,7 +28,7 @@ const NavBar = () => {
       >
         &#9776; {/* Hamburger icon */}
       </div>
-      <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
+      <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <li>
           <Link to="/">Home</Link>
         </li>

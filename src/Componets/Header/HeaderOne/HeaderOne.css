@@ -1,4 +1,9 @@
 /* Apply basic styling to the body and html elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body,
 html {
   width: 100%;
@@ -13,6 +18,7 @@ html {
   height: auto;
   padding: 12px;
   background-color: black;
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
 /* Styling for the discount title */
@@ -20,8 +26,9 @@ html {
   position: relative; /* Ensure the pseudo-element is positioned correctly */
   color: rgb(255, 123, 0); /* Text color */
   text-align: center; /* Center align text */
-  font-size: 2em; /* Adjust the size as needed */
+  font-size: 1.8vw; /* Font size relative to viewport width */
   overflow: hidden; /* Prevent overflow of pseudo-element */
+  margin: 0; /* Remove default margins */
 }
 
 /* Keyframes for the pulse animation */
@@ -40,4 +47,23 @@ html {
 /* Apply pulse animation to the discount title */
 .discount-title {
   animation: pulse 1.5s infinite; /* Animation duration and repetition */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .discount-title {
+    font-size: 2.5vw; /* Adjust font size for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .discount-title {
+    font-size: 3.5vw; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .discount-title {
+    font-size: 4.5vw; /* Adjust font size for small screens */
+  }
 }

@@ -66,22 +66,25 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
-            Facebook
+            <i className="fab fa-facebook-f"></i>
           </a>
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
           >
-            Twitter
+            <i className="fab fa-twitter"></i>
           </a>
           <a
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
-            Instagram
+            <i className="fab fa-instagram"></i>
           </a>
         </div>
         <p>&copy; 2024 Jewellery Shop. All rights reserved.</p>

@@ -1,4 +1,3 @@
-// HeaderThird.js
 import React from "react";
 import "./HeaderThird.css";
 import NavBar from "./NavBar/NavBar";
