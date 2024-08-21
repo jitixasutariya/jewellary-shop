@@ -1,7 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import "./WishList.css";
 
 /**
  * WishList Component
@@ -10,14 +7,7 @@ import "./WishList.css";
  * It is used to display a wishlist icon in the user interface.
  */
 const WishList = () => {
-  return (
-    <div className="wishlist-menu">
-      {/* Render the FontAwesome heart icon */}
-      <FontAwesomeIcon icon={faHeart} className="wishlist-icon" />
-      {/* Render the wishlist text */}
-      <span className="wishlist-text">WHISLIST</span>
-    </div>
-  );
+  return <div>Welcome to Whislist</div>;
 };
 
 export default WishList;
