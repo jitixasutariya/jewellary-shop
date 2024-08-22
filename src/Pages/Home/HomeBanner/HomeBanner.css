@@ -17,17 +17,6 @@
   padding: 0 2rem; /* Add some padding for smaller screens */
 }
 
-.banner-button {
-  margin-top: 20px;
-  padding: 1rem 2rem;
-  background-color: #ff6200;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
-}
-
 @media (max-width: 768px) {
   .home-banner {
     height: 40vh;
@@ -35,10 +24,6 @@
 
   .banner-content {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
-  }
-
-  .banner-button {
-    padding: 0.75rem 1.5rem;
   }
 }
 
@@ -49,9 +34,5 @@
 
   .banner-content {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-  }
-
-  .banner-button {
-    padding: 0.5rem 1rem;
   }
 }

@@ -38,7 +38,7 @@ const NavBar = () => {
         <li className="dropdown">
           <Link to="/">Gold</Link>
           <ul className="dropdown-menu">
-            <li style={{ paddingLeft: "10px" }}>
+            <li>
               <Link to="/gold/rings">
                 <img src={iconImg} alt="" className="icon-ring" />
                 Rings

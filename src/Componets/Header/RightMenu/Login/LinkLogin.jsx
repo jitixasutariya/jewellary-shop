@@ -1,5 +1,5 @@
 import React from "react"; // Importing React to use React components
-import { Link } from "react-router-dom"; // Importing Link from react-router-dom to handle navigation
+import { NavLink } from "react-router-dom"; // Importing Link from react-router-dom to handle navigation
 import "./LoginPopup.css"; // Importing the CSS file for styling the component
 
 // Functional component that renders a link for signing up
@@ -7,9 +7,9 @@ const LinkLogin = () => {
   return (
     <div className="link-login">
       {/* Link component to navigate to the Sign-Up page */}
-      <Link to="/sign-up" className="sign-up">
+      <NavLink to="/sign-up" className="sign-up">
         Don't have an account? Please Sign Up
-      </Link>
+      </NavLink>
     </div>
   );
 };

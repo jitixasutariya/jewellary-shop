@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./RightMenu.css";
 import LoginPopup from "./Login/LoginPopup";
 import SignUp from "./SignUp/SignUp";
+import styled from "styled-components";
+import { ActionButton } from "../../../Styles/ActionButton";
 
 const RightMenu = () => {
-  // Retrieve the user from local storage
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
-  // State to manage the visibility of the menu, login popup, sign-up popup, and login status
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isLoginPopupVisible, setIsLoginPopupVisible] = useState(false);
   const [isSignUpVisible, setIsSignUpVisible] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // useEffect hook to check if the user is logged in by retrieving the login status from local storage
   useEffect(() => {
     const loginStatus = localStorage.getItem("loginUser");
     setIsLoggedIn(!!loginStatus);
-  }, []);
+    if (loginStatus) {
+      setIsLoginPopupVisible(false); // Close the login popup when the user is logged in
+    }
+  }, [isLoggedIn]);
 
-  // Handlers to show and hide the account menu on mouse enter and leave events
   const handleMouseEnter = () => setIsMenuVisible(true);
   const handleMouseLeave = () => setIsMenuVisible(false);
 
-  // Handlers to display the login and sign-up popups
   const handleLoginClick = () => {
     setIsMenuVisible(false);
     setIsLoginPopupVisible(true);
@@ -38,14 +38,12 @@ const RightMenu = () => {
     setIsSignUpVisible(true);
   };
 
-  // Handler to log the user out by removing login information from local storage
   const handleLogoutClick = () => {
     localStorage.removeItem("loginUser");
     setIsLoggedIn(false);
     navigate("/");
   };
 
-  // Handler to close the login or sign-up popups
   const handleClosePopup = () => {
     setIsLoginPopupVisible(false);
     setIsSignUpVisible(false);
@@ -57,17 +55,11 @@ const RightMenu = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="account-menu">
-        {/* FontAwesome icon and text for the account section */}
-        <FontAwesomeIcon icon={faUser} className="user-icon" />
-        <span className="account-text">ACCOUNT</span>
-      </div>
+      <AccountMenu />
 
-      {/* Display the mega menu when the menu is visible and neither login nor sign-up popups are active */}
       {isMenuVisible && !isLoginPopupVisible && !isSignUpVisible && (
         <div className="mega-menu">
           <h1 style={{ textAlign: "center" }}>My Account</h1>
-          {/* Display the user's name if available, otherwise show 'Guest' */}
           {user ? user.name : "Guest"}
           <p
             style={{
@@ -76,24 +68,16 @@ const RightMenu = () => {
               fontSize: "1.3rem",
             }}
           >
-            {/* Show a welcome message if logged in, otherwise prompt to log in */}
             {isLoggedIn ? "Welcome Back!" : "Login to access your account"}
           </p>
           <div className="menu-buttons">
-            {/* Conditionally render login, sign-up, or logout buttons based on login status */}
             {!isLoggedIn ? (
               <>
-                <button className="menu-button" onClick={handleLoginClick}>
-                  Login
-                </button>
-                <button className="menu-button" onClick={handleSignUpClick}>
-                  SignUp
-                </button>
+                <ActionButton onClick={handleLoginClick}>Login</ActionButton>
+                <ActionButton onClick={handleSignUpClick}>SignUp</ActionButton>
               </>
             ) : (
-              <button className="menu-button" onClick={handleLogoutClick}>
-                Logout
-              </button>
+              <ActionButton onClick={handleLogoutClick}>Logout</ActionButton>
             )}
           </div>
           <p
@@ -108,10 +92,51 @@ const RightMenu = () => {
         </div>
       )}
 
-      {/* Render the login or sign-up popups when they are visible */}
       {isLoginPopupVisible && <LoginPopup onClose={handleClosePopup} />}
       {isSignUpVisible && <SignUp onClose={handleClosePopup} />}
     </div>
+  );
+};
+
+const AccountMenuIcon = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    .user-icon {
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    .user-text {
+      font-size: 1.4rem;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    &:hover .user-icon,
+    &:hover .user-text {
+      color: rgb(255, 134, 0);
+    }
+  }
+`;
+
+const AccountMenu = () => {
+  return (
+    <AccountMenuIcon className="account-menu">
+      <NavLink to={"/"} className="nav-link">
+        <FontAwesomeIcon icon={faUser} className="user-icon" />
+        <span className="user-text">ACCOUNT</span>
+      </NavLink>
+    </AccountMenuIcon>
   );
 };
 

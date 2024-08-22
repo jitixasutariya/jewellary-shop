@@ -13,7 +13,7 @@ const CartMenu = () => {
     <Cart className="cart-menu">
       <NavLink to={"/cart"} className="nav-link">
         <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
-        <span className="cart-text">Cart</span>
+        <span className="cart-text">CART</span>
       </NavLink>
     </Cart>
   );
@@ -105,19 +105,21 @@ const SecondHeader = () => {
         </NavLink>
       </div>
 
-      {/* Middle Sidebar containing the search box */}
-      <div className="middle_sidebar">
-        <SearchBox />
-      </div>
-
       {/* Right Sidebar containing the right menu */}
-      <div className="right_sidebar">
+      <MenuWrapper>
+        <SearchBox />
         <RightMenu />
         <WishListMenu />
         <CartMenu />
-      </div>
+      </MenuWrapper>
     </div>
   );
 };
+
+const MenuWrapper = styled.div`
+  display: flex;
+  justify-content: space-between; /* Distributes space between items */
+  gap: 50px; /* Adds space between each item */
+`;
 
 export default SecondHeader;

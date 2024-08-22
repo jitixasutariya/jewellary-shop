@@ -1,3 +1,4 @@
+import { Category } from "@mui/icons-material";
 import ring from "../../../Assets/diamond-ring.jpg";
 import ring1 from "../../../Assets/Rings/Gold/ring1.jpg";
 import ring2 from "../../../Assets/Rings/Gold/ring2.jpg";
@@ -15,6 +16,8 @@ export const RingData = [
     name: "Intertwining Leaves Rose Gold and Diamond Finger Ring",
     price: "₹29 469 ",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 2,
@@ -22,6 +25,8 @@ export const RingData = [
     name: "Segmented Gold Men's Finger Ring",
     price: "₹70 351",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 3,
@@ -29,6 +34,8 @@ export const RingData = [
     name: "Knotting Stackable Ring",
     price: "₹51 063",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 4,
@@ -36,6 +43,8 @@ export const RingData = [
     name: "Signet Foliage Gold Finger Ring",
     price: "₹45 804 ",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 5,
@@ -43,6 +52,8 @@ export const RingData = [
     name: "Exquisite Dome Ring",
     price: "₹40 774",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 6,
@@ -50,6 +61,8 @@ export const RingData = [
     name: "Classy Hexagonal Ring",
     price: "₹21 383",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 7,
@@ -57,6 +70,8 @@ export const RingData = [
     name: "Floral Filigree Finger Ring",
     price: "₹25 419",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
   {
     id: 8,
@@ -64,5 +79,7 @@ export const RingData = [
     name: "Timeless Gold Men Finger Ring for Men",
     price: "₹70 829",
     sizes: ["S", "M", "L"],
+    category: "ring",
+    featured: true,
   },
 ];

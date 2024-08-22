@@ -1,4 +1,5 @@
 import React from "react";
+import { ActionButton } from "../../Styles/ActionButton";
 import "./Footer.css";
 
 const Footer = () => {
@@ -56,7 +57,9 @@ const Footer = () => {
           <h4>Newsletter Signup</h4>
           <form className="newsletter-form">
             <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
+            <ActionButton style={{ border: "none", borderRadius: "0" }}>
+              Subscribe
+            </ActionButton>
           </form>
         </div>
       </div>
