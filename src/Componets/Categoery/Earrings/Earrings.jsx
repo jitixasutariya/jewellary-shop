@@ -8,7 +8,11 @@ const Earrings = () => {
     <div className="earing-ring-page">
       <h2 className="title">Gold Earrings</h2>
       <div className="product-card-list">
-        <ProductCard products={EarringsData} category="Earrings" />
+        <ProductCard
+          products={EarringsData}
+          category="Earrings"
+          Hello="Hello"
+        />
       </div>
     </div>
   );
