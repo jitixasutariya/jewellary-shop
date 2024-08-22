@@ -1,67 +1,20 @@
-/* Resetting some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Rings.css */
 
-/* Container styling */
 .gold-ring-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Title styling */
 .title {
   text-align: center;
-  padding: 20px;
-  margin: 20px;
-  font-size: 2.5rem; /* Responsive font size */
+  margin-bottom: 20px;
 }
 
-/* Product card container styling */
 .product-card-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
 }
 
 .product-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
-  justify-content: center;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .product-card {
-    padding-left: 0; /* Adjust padding for smaller screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem; /* Smaller font size for tablets and mobile */
-  }
-
-  .product-card {
-    gap: 10px; /* Reduced space between cards */
-  }
-
-  .product-card-list {
-    padding: 0 5px; /* Adjust padding for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.5rem; /* Even smaller font size for mobile phones */
-  }
-
-  .product-card {
-    gap: 5px; /* Minimal space between cards */
-  }
+  width: 100%;
 }

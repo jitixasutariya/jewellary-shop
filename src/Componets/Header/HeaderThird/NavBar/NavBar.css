@@ -55,13 +55,12 @@
 
 .dropdown-menu {
   display: none;
-  width: 300px;
+  width: 350px;
   list-style: none;
   position: absolute;
   top: 100%;
   left: 0;
   background-color: #fff;
-  padding: 1rem;
   margin: 0;
   border: 1px solid #ddd;
   z-index: 1000;

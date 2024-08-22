@@ -1,0 +1,130 @@
+/* Container styling */
+.product-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for title and image */
+.product-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  margin-bottom: 20px;
+  /* Ensure there's enough space for the image */
+  max-width: 100%;
+}
+
+/* Product image styling */
+.single-product-image {
+  border: 2px solid black;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+
+.single-product-image:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+}
+
+/* Product details styling */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: calc(100% - 520px); /* Adjust based on the new max-width */
+}
+
+.product-title {
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.product-description {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.product-size-list {
+  margin-top: 20px;
+}
+
+.product-size {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: rgb(255, 134, 0);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.product-size:hover {
+  background-color: #ffbf00;
+}
+
+.product-size.selected {
+  border-color: #ffbf00;
+  background-color: #d0e7ff;
+  color: #007bff;
+}
+.product-add-to-cart {
+  padding-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.5em;
+  }
+
+  .product-description {
+    font-size: 1em;
+  }
+
+  .product-price {
+    font-size: 1.2em;
+  }
+
+  .single-product-image {
+    max-width: 100%;
+  }
+
+  .product-details {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-container {
+    padding: 10px;
+  }
+
+  .product-title {
+    font-size: 1.2em;
+  }
+
+  .product-description {
+    font-size: 0.9em;
+  }
+
+  .product-price {
+    font-size: 1em;
+  }
+}

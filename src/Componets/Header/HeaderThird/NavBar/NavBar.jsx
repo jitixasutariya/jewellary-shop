@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import iconImg from "../../../../Assets/ring_icon.png";
 import necklessIconImg from "../../../../Assets/gold_set_icon.jpg";
 import bracletImg from "../../../../Assets/bracelet.jpg";
@@ -30,111 +30,111 @@ const NavBar = () => {
       </div>
       <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <Link to="/about-us">About</Link>
+          <NavLink to="/about-us">About</NavLink>
         </li>
         <li className="dropdown">
-          <Link to="/">Gold</Link>
+          <NavLink to="/">Gold</NavLink>
           <ul className="dropdown-menu">
             <li>
-              <Link to="/gold/rings">
+              <NavLink to="/gold/rings">
                 <img src={iconImg} alt="" className="icon-ring" />
                 Rings
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/necklaces">
+              <NavLink to="/gold/necklaces">
                 <img src={necklessIconImg} alt="" className="icon-bracelt" />
                 Necklaces
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/bangles">
+              <NavLink to="/gold/bangles">
                 <img src={bangleImg} alt="" className="icon-bracelt" />
                 Bangles
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/earrings">
+              <NavLink to="/gold/earrings">
                 <img src={earing_icon} alt="" className="icon-bracelt" />
                 Earrings
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/gold_chains">
+              <NavLink to="/gold/gold_chains">
                 <img src={chainIcon} alt="" className="icon-bracelt" />
                 Gold Chains
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/pendants">
+              <NavLink to="/gold/pendants">
                 <img src={pendentIcon} alt="" className="icon-bracelt" />
                 Pendants
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/mangalsutras">
+              <NavLink to="/gold/mangalsutras">
                 <img src={mangalIcon} alt="" className="icon-bracelt" />
                 Mangalsutras
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/gold/bracelets">
+              <NavLink to="/gold/bracelets">
                 <img src={bracletImg} alt="" className="icon-bracelt" />
                 Bracelets
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </li>
         <li className="dropdown">
-          <Link to="/">Diamond</Link>
+          <NavLink to="/">Diamond</NavLink>
           <ul className="dropdown-menu">
             <li>
-              <Link to="/diamond/rings">
+              <NavLink to="/diamond/rings">
                 <img src={diamongRingIcon} alt="" className="icon-bracelt" />
                 Rings
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/diamond/necklaces">
+              <NavLink to="/diamond/necklaces">
                 <img
                   src={diamongNecklessIcon}
                   alt=""
                   className="icon-bracelt"
                 />
                 Necklaces
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/diamond/earrings">
+              <NavLink to="/diamond/earrings">
                 <img src={diamongEarringIcon} alt="" className="icon-bracelt" />
                 Earrings
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/diamond/pendants">
+              <NavLink to="/diamond/pendants">
                 <img src={diamongPendentIcon} alt="" className="icon-bracelt" />
                 Pendants
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/diamond/bracelets">
+              <NavLink to="/diamond/bracelets">
                 <img src={diamondBraceltIcon} alt="" className="icon-bracelt" />
                 Bracelets
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </li>
         <li>
-          <Link to="/wedding-collections">Wedding Collections</Link>
+          <NavLink to="/wedding-collections">Wedding Collections</NavLink>
         </li>
         <li>
-          <Link to="/blogs">Blogs</Link>
+          <NavLink to="/blogs">Blogs</NavLink>
         </li>
         <li>
-          <Link to="/contact-us">Contact</Link>
+          <NavLink to="/contact-us">Contact</NavLink>
         </li>
       </ul>
     </nav>
