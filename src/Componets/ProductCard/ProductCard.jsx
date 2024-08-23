@@ -1,31 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./ProductCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { Spa } from "@mui/icons-material";
 
-// Pass the RingData as a prop or import it in the parent component
 const ProductCard = ({ products, category }) => {
-  // State to keep track of selected size for each product
-  const [selectedSizes, setSelectedSizes] = useState({});
-
   const navigate = useNavigate();
 
-  // Handle size click for a specific product
-  const handleSizeClick = (id, size) => {
-    setSelectedSizes((prevState) => ({
-      ...prevState,
-      [id]: size,
-    }));
-  };
-
-  // Navigate to product details page
   const handleCardClick = (id) => {
     navigate(`/product/${id}`);
   };
 
-  // Filter the products based on the category
+  const handleKeyDown = (event, id) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      navigate(`/product/${id}`);
+    }
+  };
+
   const filteredProducts = products.filter(
     (product) => product.category === category
   );
@@ -33,46 +25,26 @@ const ProductCard = ({ products, category }) => {
   return (
     <div className="cards">
       {filteredProducts.map((product) => (
-        <div className="card" key={product.id} role="button" tabIndex={0}>
-          <img
-            src={product.image}
-            alt={product.name}
-            className="card-img"
-            onClick={() => handleCardClick(product.id)}
-          />
+        <div
+          className="card"
+          key={product.id}
+          role="button"
+          tabIndex={0}
+          onClick={() => handleCardClick(product.id)}
+          onKeyDown={(event) => handleKeyDown(event, product.id)}
+        >
+          <img src={product.images} alt={product.name} className="card-img" />
           <div className="card_info">
             <div className="card-details">
               <h3 className="card_title">{product.name}</h3>
               <span className="card_price">{product.price}</span>
             </div>
-            <div className="weight-details">
-              <span className="product-weight"></span>
-            </div>
-            <div className="size-details">
-              <span className="card_size">
-                {Array.isArray(product.sizes) ? (
-                  product.sizes.map((size, index) => (
-                    <span
-                      key={index}
-                      className={`size-item ${
-                        size === selectedSizes[product.id] ? "selected" : ""
-                      }`}
-                      onClick={() => handleSizeClick(product.id, size)}
-                      role="button"
-                      tabIndex={0}
-                      aria-label={`Select size ${size}`}
-                    >
-                      {size}
-                    </span>
-                  ))
-                ) : (
-                  <span>{product.sizes}</span>
-                )}
-              </span>
+
+            <div className="card-link">
               <NavLink
-                to={"/cart"}
+                to="/cart"
                 className="add-to-cart-link"
-                aria-label="Add to cart"
+                aria-label={`Add ${product.name} to cart`}
               >
                 <FontAwesomeIcon
                   icon={faShoppingCart}
@@ -80,11 +52,14 @@ const ProductCard = ({ products, category }) => {
                 />
               </NavLink>
               <NavLink
-                to={"/wishlist"}
-                className="whislist-link"
-                aria-label="Add to wishlist"
+                to="/wishlist"
+                className="wishlist-link"
+                aria-label={`Add ${product.name} to wishlist`}
               >
-                <FontAwesomeIcon icon={faHeart} className="whislist-icon" />
+                <FontAwesomeIcon
+                  icon={faHeart}
+                  className="wishlist-icon-list"
+                />
               </NavLink>
             </div>
           </div>

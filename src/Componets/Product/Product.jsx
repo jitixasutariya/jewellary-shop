@@ -6,65 +6,102 @@ import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
+const colorMap = {
+  Rose: "#b76e79",
+  White: "#e3e3de",
+  "White and Rose": "linear-gradient(45deg, #f5f5f5, #b76e79)",
+  Yellow: "#ffd700",
+  "Yellow and Rose": "linear-gradient(45deg, #ffd700, #b76e79)",
+  "Yellow and White": "linear-gradient(45deg, #ffd700, #f5f5f5)",
+  "Yellow White and Rose": "linear-gradient(45deg, #ffd700, #f5f5f5, #b76e79)",
+};
+
 const SingleProductPage = () => {
   const { id } = useParams();
-  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedSizes, setSelectedSizes] = useState({});
+  const [selectedColor, setSelectedColor] = useState(null);
 
-  // Find the product by ID
   const product = RingData.find((p) => p.id === parseInt(id));
 
-  // Return early if the product is not found
-  if (!product) return <p>Product not found</p>;
-
-  // Event handler for size selection
-  const handleSizeClick = (size) => {
-    setSelectedSize(size);
+  const handleSizeClick = (id, size) => {
+    setSelectedSizes((prevState) => ({
+      ...prevState,
+      [id]: size,
+    }));
   };
+
+  const handleColorClick = (color) => {
+    setSelectedColor(color);
+  };
+
+  if (!product) return <p>Product not found</p>;
 
   return (
     <div className="product-container">
       <div className="product-header">
         <img
-          src={product.image}
+          src={product.images}
+          srcSet={`${product.images} 1x, ${product.images} 2x`}
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt={product.name}
           className="single-product-image"
         />
         <div className="product-details">
           <h1 className="product-title">{product.name}</h1>
-          <div
-            className="product-price-categoery"
-            style={{ display: "flex", justifyContent: "space-between" }}
-          >
+          <div className="product-info">
             <p className="product-price">Price: {product.price}</p>
-            <p className="product-price">{product.category}</p>
+            <p className="product-category">{product.category}</p>
           </div>
-
           <p className="product-description">{product.description}</p>
-          <div className="product-size-list">
-            {product.sizes.map((size, index) => (
-              <span
-                key={index}
-                className={`product-size ${
-                  size === selectedSize ? "selected" : ""
-                }`}
-                onClick={() => handleSizeClick(size)}
-              >
-                {size}
-              </span>
-            ))}
+          <div className="product-sizes">
+            {Array.isArray(product.sizes) ? (
+              product.sizes.map((size, index) => (
+                <span
+                  key={index}
+                  className={`product-size ${
+                    size === selectedSizes[product.id] ? "selected" : ""
+                  }`}
+                  onClick={() => handleSizeClick(product.id, size)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Select size ${size}`}
+                >
+                  {size}
+                </span>
+              ))
+            ) : (
+              <span>{product.sizes}</span>
+            )}
           </div>
-          <div className="product-add-to-cart">
+          <div className="product-colors">
+            {Array.isArray(product.metal_colors) &&
+              product.metal_colors.map((color, index) => (
+                <div
+                  key={index}
+                  className={`color-circle ${
+                    color === selectedColor ? "selected-color" : ""
+                  }`}
+                  onClick={() => handleColorClick(color)}
+                  style={{
+                    background: colorMap[color] || "#fff",
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Select color ${color}`}
+                />
+              ))}
+          </div>
+          <div className="product-actions">
             <NavLink to={"/cart"}>
-              <ActionButton style={{ fontWeight: "600" }}>
+              <ActionButton className="add-to-cart-btn">
                 Add To Cart
               </ActionButton>
             </NavLink>
-            <NavLink
-              to={"/wishlist"}
-              className="whislist-link"
-              aria-label="Add to wishlist"
-            >
-              <FontAwesomeIcon icon={faHeart} className="whislist-icon" />
+            <NavLink to={"/wishlist"} aria-label="Add to wishlist">
+              <FontAwesomeIcon
+                icon={faHeart}
+                className="wishlist-icon-product"
+              />
             </NavLink>
           </div>
         </div>

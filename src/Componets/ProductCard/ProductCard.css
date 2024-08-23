@@ -47,7 +47,7 @@
 }
 
 .card_title {
-  font-size: 1.3em;
+  font-size: 1.4rem; /* Changed from em to rem for better scalability */
   font-weight: 700;
   margin: 10px 0;
   color: #333;
@@ -59,57 +59,33 @@
 }
 
 .card_price {
-  font-size: 1.3em;
+  font-size: 1.4rem; /* Changed from em to rem for better scalability */
+  font-weight: 500;
   color: #e67e22;
   margin-bottom: 10px;
 }
 
-/* Size selection styling */
-.size-details {
-  margin-top: 10px;
-}
-
-.card_size {
+/* Styling for individual links within card-link */
+.card-link {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px; /* Space out the icons */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
 }
 
-.size-item {
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  padding: 5px 15px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.size-item:hover,
-.size-item.selected {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-/* Icon styling */
-.add-to-cart-link,
-.whislist-link {
-  padding-top: 15px;
-  display: inline-block;
-  margin: 10px;
-  color: #e67e22;
+/* Adjust icon styling */
+.add-to-cart-icon,
+.wishlist-icon-list {
+  font-size: 2.2rem; /* Adjust size as needed */
+  color: #e67e22; /* Primary color for icons */
   transition: color 0.3s ease;
 }
 
-.add-to-cart-link:hover,
-.whislist-link:hover {
-  color: #ffbf00;
-}
-
-.add-to-cart-icon,
-.whislist-icon {
-  font-size: 2em;
+.card-link:hover .add-to-cart-icon,
+.card-link:hover .wishlist-icon-list {
+  color: #ffbf00; /* Change color on hover */
 }
 
 /* Responsive design */
@@ -136,17 +112,14 @@
     max-width: 100%; /* Ensure cards take full width */
   }
 
-  .card_title {
-    font-size: 1.1em; /* Adjust font size for smaller screens */
-  }
-
+  .card_title,
   .card_price {
-    font-size: 1.1em; /* Adjust font size for smaller screens */
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
   }
 
   .add-to-cart-icon,
-  .whislist-icon {
-    font-size: 1.5em; /* Adjust icon size for smaller screens */
+  .wishlist-icon-list {
+    font-size: 1.5rem; /* Adjust icon size for smaller screens */
   }
 }
 
@@ -164,7 +137,7 @@
 .card:focus,
 .size-item:focus,
 .add-to-cart-link:focus,
-.whislist-link:focus {
+.wishlist-link:focus {
   outline: 2px solid #e67e22;
   outline-offset: 2px;
 }
