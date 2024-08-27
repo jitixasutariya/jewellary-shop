@@ -20,6 +20,25 @@ const SingleProductPage = () => {
   const { id } = useParams();
   const [selectedSizes, setSelectedSizes] = useState({});
   const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedWeight, setSelectedWeight] = useState("");
+  // Initialize state for quantity
+  const [quantity, setQuantity] = useState(1);
+
+  // Handle change in input field
+  const handleChange = (e) => {
+    const value = Math.max(1, parseInt(e.target.value) || 1); // Ensure quantity is at least 1
+    setQuantity(value);
+  };
+
+  // Handle increment
+  const handleIncrement = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  // Handle decrement
+  const handleDecrement = () => {
+    setQuantity((prevQuantity) => Math.max(1, prevQuantity - 1));
+  };
 
   const product = RingData.find((p) => p.id === parseInt(id));
 
@@ -28,6 +47,10 @@ const SingleProductPage = () => {
       ...prevState,
       [id]: size,
     }));
+  };
+
+  const handleSelectWeight = (event) => {
+    setSelectedWeight(event.target.value);
   };
 
   const handleColorClick = (color) => {
@@ -53,6 +76,35 @@ const SingleProductPage = () => {
             <p className="product-category">{product.category}</p>
           </div>
           <p className="product-description">{product.description}</p>
+          <div className="product-midpart">
+            <div className="select-container">
+              <label htmlFor="selectBox">Weight</label>
+              <select
+                id="selectBox"
+                value={selectedWeight}
+                onChange={handleSelectWeight}
+              >
+                <option value="">Select Weight</option>
+                {product.weight?.map((weight, index) => (
+                  <option key={index} value={weight}>
+                    {weight}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="qty-container">
+              <label htmlFor="qty">QTY</label>
+              <button onClick={handleDecrement}>-</button>
+              <input
+                type="number"
+                value={quantity}
+                onChange={handleChange}
+                min="1" // Optional, to prevent negative values
+              />
+              <button onClick={handleIncrement}>+</button>
+            </div>
+          </div>
+
           <div className="product-sizes">
             {Array.isArray(product.sizes) ? (
               product.sizes.map((size, index) => (

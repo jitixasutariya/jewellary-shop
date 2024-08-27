@@ -1,14 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import { TabButton } from "../../../Styles/TabButton";
 import "./HomeProduct.css";
 
 const HomeProduct = (props) => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
-  // Handler function to navigate to another page
+  // Handler function to navigate to a category-wise product page
   const handleExploreMore = () => {
-    navigate("/gold/rings"); // Replace "/target-page" with the path you want to navigate to
+    navigate(`/gold/${props.category}`); // Use category prop to navigate
   };
 
   return (
@@ -18,8 +18,6 @@ const HomeProduct = (props) => {
         <div className="card-content">
           <h3>{props.name}</h3>
           <TabButton onClick={handleExploreMore}>
-            {" "}
-            {/* Add onClick handler */}
             <span>Explore More</span>
           </TabButton>
         </div>

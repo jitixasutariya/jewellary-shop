@@ -5,10 +5,12 @@ export const HomeProductList = [
   {
     image: latest_ring,
     name: "Pretty in Pink",
+    category: "rings",
   },
   {
     image: latest_earing,
     name: "Treanding Earrings",
+    category: "earrings",
   },
   {
     image: latest_design,

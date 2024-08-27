@@ -10,15 +10,21 @@ import ring7 from "../../../Assets/Rings/Gold/ring7.jpg";
 import ring8 from "../../../Assets/Rings/Gold/ring8.jpg";
 import earing1 from "../../../Assets/Earings/Gold/earing1.jpg";
 import earing2 from "../../../Assets/Earings/Gold/earing2.jpg";
+import earing3 from "../../../Assets/Earings/Gold/earing3.jpg";
+import earing4 from "../../../Assets/Earings/Gold/earring4.jpg";
+import earing5 from "../../../Assets/Earings/Gold/earring5.jpg";
+import earing6 from "../../../Assets/Earings/Gold/earring6.jpg";
 
 export const RingData = [
   {
     id: 1,
     images: [ring1],
     name: "Intertwining Leaves Rose Gold and Diamond Finger Ring",
+    barnd: "",
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹29 469 ",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: [
       "White and Rose",
@@ -37,6 +43,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹70 351",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -49,6 +56,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹51 063",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -61,6 +69,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹45 804 ",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -73,6 +82,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹40 774",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -85,6 +95,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹21 383",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -97,6 +108,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹25 419",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -109,6 +121,7 @@ export const RingData = [
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹70 829",
+    weight: ["5", "10", "20"],
     sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
     metal_colors: ["Yellow", "Yellow and Rose"],
     category: "Ring",
@@ -138,7 +151,7 @@ export const RingData = [
   {
     id: 10,
     images: [earing2],
-    name: "Timeless Gold Men Finger Ring for Men",
+    name: "Embrace Diamond Stud Earrings",
     description:
       "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
     price: "₹70 829",
@@ -146,8 +159,80 @@ export const RingData = [
     sizes: ["S", "M", "L"],
     metal_colors: [
       "Rose",
-      "White",
+
       "White and Rose",
+
+      "Yellow and Rose",
+
+      "Yellow White and Rose",
+    ],
+    category: "Earrings",
+    featured: true,
+  },
+  {
+    id: 11,
+    images: [earing3],
+    name: "Traditional Fancy Graceful Gold Drop Earrings",
+    description:
+      "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
+    price: "₹70 829",
+    weight: ["5", "10", "20"],
+    sizes: ["S", "M", "L"],
+    metal_colors: [
+      "Yellow",
+      "Yellow and Rose",
+      "Yellow and White",
+      "Yellow White and Rose",
+    ],
+    category: "Earrings",
+    featured: true,
+  },
+  {
+    id: 12,
+    images: [earing4],
+    name: "Timeless Beauty Gold Stud Earrings",
+    description:
+      "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
+    price: "₹70 829",
+    weight: ["5", "10", "20"],
+    sizes: ["S", "M", "L"],
+    metal_colors: [
+      "Yellow",
+      "Yellow and Rose",
+      "Yellow and White",
+      "Yellow White and Rose",
+    ],
+    category: "Earrings",
+    featured: true,
+  },
+  {
+    id: 13,
+    images: [earing5],
+    name: "Cascade Triangular Stud Earrings",
+    description:
+      "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
+    price: "₹70 829",
+    weight: ["5", "10", "20"],
+    sizes: ["S", "M", "L"],
+    metal_colors: [
+      "Yellow",
+      "Yellow and Rose",
+      "Yellow and White",
+      "Yellow White and Rose",
+    ],
+    category: "Earrings",
+    featured: true,
+  },
+  {
+    id: 14,
+    images: [earing6],
+    name: "Filigree Gold Drop Earrings",
+    description:
+      "Accentuate your majestic beauty with this 18 Karat Rose Gold finger ring with diamonds in a leaf pattern for extra dazzle. Stone Clarity I1I2",
+    price: "₹70 829",
+    weight: ["5", "10", "20"],
+    sizes: ["S", "M", "L"],
+    metal_colors: [
       "Yellow",
       "Yellow and Rose",
       "Yellow and White",

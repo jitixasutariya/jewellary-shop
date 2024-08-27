@@ -84,6 +84,101 @@
   font-size: var(--font-size-md);
   color: var(--secondary-color);
 }
+.product-midpart {
+  display: flex;
+  gap: 10rem;
+}
+/* Container styling */
+.qty-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+  margin-bottom: 20px; /* Space below the container */
+}
+
+/* Label styling */
+.qty-container label {
+  font-size: var(--font-size-md);
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-right: 10px; /* Space between label and quantity controls */
+}
+
+/* Button styling */
+.qty-container button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.qty-container button:hover {
+  background-color: #d65a31; /* Slightly darker shade for hover effect */
+}
+
+.qty-container button:active {
+  transform: scale(0.95); /* Slight scale-down effect on click */
+}
+
+/* Input field styling */
+.qty-container input {
+  width: 60px;
+  text-align: center;
+  padding: 8px;
+  font-size: var(--font-size-md);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qty-container input:focus {
+  border-color: #d65a31;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Container styling */
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+.select-container label {
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Select box styling */
+.select-container select {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 3px solid var(--primary-color);
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the select box */
+.select-container select:hover {
+  border-color: white;
+  box-shadow: 0 0 5px orange;
+}
+
+/* Option styling */
+.select-container option {
+  font-size: 16px;
+  padding: 10px;
+}
 
 .product-size-list {
   margin-top: 20px;

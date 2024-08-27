@@ -22,6 +22,7 @@ const HomePage = () => {
         </div>
         <hr style={{ border: "2px solid #FFAA33", margin: "30px 100px" }} />
       </div>
+      <div className="recent-view-product"></div>
     </div>
   );
 };
